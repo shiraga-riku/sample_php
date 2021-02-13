@@ -12,6 +12,7 @@
 
   // 文字列を結合する方法
   $merge = $mozi . $str; // パタ-ン1
+  $merge2 = "test" . $str; // パタ-ン2
 
   // 配列の書き方
   $array = array(); //PHPの古いバ-ジョンから対応

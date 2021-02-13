@@ -1,3 +1,8 @@
+<?php
+  require "./inc/db.php";
+  $sql = "INSERT INTO products(name,price) VALUES('" . $_POST['name']. "'," .(int)$_POST['price']. ")";
+  $res = pg_query($dbconnect, $sql);
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -8,16 +13,14 @@
   <title>testApp</title>
 </head>
 <body>
-  <?php
-  <form action="#" method="POST">
+  <form action="" method="POST">
     <p>商品名</p>
     <input type="text" name="name">
     <p>価格</p>
-    <input type="text" method="price">
+    <input type="text" name="price">
     <p>画像</p>
-    <input type="file" method="pic">
-    <input type="button" value="変更">
+    <input type="file" name="image">
+    <input type="submit" value="登録">
   </form>
-  ?>
 </body>
 </html>
