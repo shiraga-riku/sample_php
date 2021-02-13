@@ -3,7 +3,7 @@ services:
   app:
     build: .
     ports:
-      - 80:80
+      - 81:80
     volumes:
       - ./html:/var/www/html
     container_name: sample_system
@@ -16,8 +16,8 @@ services:
       - sampleSystem:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: sample_system
-      POSTGRES_USER: takeiteppei
-      POSTGRES_PASSWORD: g-t.takei
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
 
 volumes:
   sampleSystem:
