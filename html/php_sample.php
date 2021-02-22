@@ -65,6 +65,9 @@
   $post_value = $_POST['text'];
 
   $requst_value = $_REQUEST['text'];
+  $_SERVER['REQUEST_METHOD'] == 'POST';
+
+  // filter_input(INPUT_SERVER 'REQUEST_METHOD' == 'POST');
 ?>
 
 <!-- 式展開の仕方 -->
