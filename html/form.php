@@ -1,5 +1,7 @@
 <?php
   require "./inc/db.php";
+  $page_title = 'form';
+
   //SQLインジェクション対策
   $updateId = (int)$_REQUEST['id'];
   $name = pg_escape_string($_POST['name']);
@@ -33,16 +35,9 @@
       exit;
     }
   }
+
+  require './inc/head.php';
 ?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-  <title>testApp</title>
-</head>
 <body>
   <form action="" method="POST">
     <p>商品名</p>

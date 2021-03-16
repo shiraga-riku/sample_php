@@ -1,5 +1,7 @@
 <?php 
   require "./inc/db.php";
+  $page_title = 'list';
+
   $query = pg_query($dbconnect,"SELECT id, name, price FROM products");
   $results = pg_fetch_all($query);
   $deleteId = (int)$_GET['id'];
@@ -18,15 +20,9 @@
     $html .= '<td><a href="./list.php?id=' . $val["id"] . '">削除</a></td>';
     $html .= '</tr>';
   }
+
+  require './inc/head.php';
 ?>
-<!DOCTYPE html>
-<html lang="jp">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>list</title>
-</head>
 <body>
   <table>
     <tr>
